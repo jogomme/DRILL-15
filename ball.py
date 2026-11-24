@@ -49,4 +49,3 @@ class Ball:
             game_world.remove_object(self)
         elif group == 'zombie:ball' :
             game_world.remove_object(self)
-            print("a")
