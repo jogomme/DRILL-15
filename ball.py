@@ -34,6 +34,7 @@ class Ball:
         if (self.x < -self.radius or self.x > get_canvas_width() + self.radius
                 or self.y - self.radius <= GROUND_Y):
             game_world.remove_object(self)
+            pass
 
     def draw(self):
         self.image.draw(self.x, self.y)
@@ -44,4 +45,6 @@ class Ball:
 
     def handle_collision(self, group, other) :
         if group == 'boy:ball' :
+            game_world.remove_object(self)
+        if group == 'zombie:ball' :
             game_world.remove_object(self)
